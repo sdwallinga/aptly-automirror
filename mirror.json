@@ -1,0 +1,85 @@
+{
+  "endpoint": "mirror",
+  "repositories": [
+    {
+      "name": "ubuntu",
+      "description": "Official Ubuntu packages",
+      "dists": [
+        {
+          "distribution": "xenial",
+          "url": "http://us-east-1.archive.ubuntu.com/ubuntu"
+        },
+        { 
+          "distribution": "xenial-backports",
+          "url": "http://us-east-1.archive.ubuntu.com/ubuntu"
+        },
+        {
+          "distribution": "xenial-proposed",
+          "url": "http://us-east-1.archive.ubuntu.com/ubuntu"
+        },
+        {
+          "distribution": "xenial-security",
+          "url": "http://us-east-1.archive.ubuntu.com/ubuntu"
+        },
+        {
+          "distribution": "xenial-updates",
+          "url": "http://us-east-1.archive.ubuntu.com/ubuntu"
+        }
+      ]
+    },
+    {
+      "name": "zabbix",
+      "description": "Official Zabbix repository",
+      "dists": [
+        {
+          "distribution": "xenial",
+          "url": "http://repo.zabbix.com/zabbix/3.4/ubuntu"
+        },
+        {
+          "distribution": "trusty",
+          "url": "http://repo.zabbix.com/zabbix/3.4/ubuntu"
+        }
+      ]
+    },
+    {
+      "name": "mesos",
+      "description": "Mesos",
+      "dists": [
+        {
+          "distribution": "xenial",
+          "url": "http://repos.mesosphere.com/ubuntu"
+        }
+      ]
+    },
+    {
+      "name": "java",
+      "description": "webupd8team/java PPA for JDK",
+      "dists": [
+        {
+          "distribution": "xenial",
+          "ppa": "webupd8team/java"
+        }
+      ]
+    },
+    {
+      "name": "elastic",
+      "description": "ElasticSearch 5.x (Latest) Stable",
+      "dists": [
+        {
+          "distribution": "stable",
+          "url": "https://artifacts.elastic.co/packages/5.x/apt"
+        }
+      ]
+    },
+    {
+      "name": "elastic-old",
+      "description": "Ancient ElasticSearch 1.7 for BOSS 1 environments",
+      "dists": [
+        {
+          "distribution": "stable",
+          "url": "http://packages.elastic.co/elasticsearch/1.7/debian"
+        }
+      ]
+    }
+  ]
+}
