@@ -7,23 +7,23 @@
       "dists": [
         {
           "distribution": "xenial",
-          "url": "http://us-east-1.archive.ubuntu.com/ubuntu"
+          "uri": "http://us-east-1.archive.ubuntu.com/ubuntu"
         },
         { 
           "distribution": "xenial-backports",
-          "url": "http://us-east-1.archive.ubuntu.com/ubuntu"
+          "uri": "http://us-east-1.archive.ubuntu.com/ubuntu"
         },
         {
           "distribution": "xenial-proposed",
-          "url": "http://us-east-1.archive.ubuntu.com/ubuntu"
+          "uri": "http://us-east-1.archive.ubuntu.com/ubuntu"
         },
         {
           "distribution": "xenial-security",
-          "url": "http://us-east-1.archive.ubuntu.com/ubuntu"
+          "uri": "http://us-east-1.archive.ubuntu.com/ubuntu"
         },
         {
           "distribution": "xenial-updates",
-          "url": "http://us-east-1.archive.ubuntu.com/ubuntu"
+          "uri": "http://us-east-1.archive.ubuntu.com/ubuntu"
         }
       ]
     },
@@ -33,11 +33,11 @@
       "dists": [
         {
           "distribution": "xenial",
-          "url": "http://repo.zabbix.com/zabbix/3.4/ubuntu"
+          "uri": "http://repo.zabbix.com/zabbix/3.4/ubuntu"
         },
         {
           "distribution": "trusty",
-          "url": "http://repo.zabbix.com/zabbix/3.4/ubuntu"
+          "uri": "http://repo.zabbix.com/zabbix/3.4/ubuntu"
         }
       ]
     },
@@ -47,7 +47,7 @@
       "dists": [
         {
           "distribution": "xenial",
-          "url": "http://repos.mesosphere.com/ubuntu"
+          "uri": "http://repos.mesosphere.com/ubuntu"
         }
       ]
     },
@@ -57,7 +57,7 @@
       "dists": [
         {
           "distribution": "xenial",
-          "ppa": "webupd8team/java"
+          "uri": "webupd8team/java"
         }
       ]
     },
@@ -67,7 +67,7 @@
       "dists": [
         {
           "distribution": "stable",
-          "url": "https://artifacts.elastic.co/packages/5.x/apt"
+          "uri": "https://artifacts.elastic.co/packages/5.x/apt"
         }
       ]
     },
@@ -77,7 +77,7 @@
       "dists": [
         {
           "distribution": "stable",
-          "url": "http://packages.elastic.co/elasticsearch/1.7/debian"
+          "uri": "http://packages.elastic.co/elasticsearch/1.7/debian"
         }
       ]
     },
@@ -87,7 +87,7 @@
       "dists": [
         {
           "distribution": "xenial",
-          "ppa": "maxmind/ppa"
+          "uri": "maxmind/ppa"
         }
       ]
     },
@@ -97,17 +97,17 @@
       "dists": [
         {
           "distribution": "xenial-pgdg",
-          "url": "http://apt.postgresql.org/pub/repos/apt"
+          "uri": "http://apt.postgresql.org/pub/repos/apt"
         }
       ]
     },
     {
       "name": "logstash",
-      "Description": "Old Logstash 2.3",
+      "description": "Old Logstash 2.3",
       "dists": [
         {
           "distribution": "stable",
-          "url": "http://packages.elasticsearch.org/logstash/2.3/debian"
+          "uri": "http://packages.elasticsearch.org/logstash/2.3/debian"
         }
       ]
     },
@@ -117,7 +117,7 @@
       "dists": [
         {
           "distribution": "xenial",
-          "ppa": "fkrull/deadsnakes"
+          "uri": "fkrull/deadsnakes"
         }
       ]
     },
@@ -127,7 +127,7 @@
       "dists": [
         {
           "distribution": "xenial",
-          "url": "http://mirrors.syringanetworks.net/mariadb/repo/10.2/ubuntu"
+          "uri": "http://mirrors.syringanetworks.net/mariadb/repo/10.2/ubuntu"
         }
       ]
     }
