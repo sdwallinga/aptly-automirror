@@ -1,0 +1,1 @@
+aptly publish snapshot -passphrase="`vault read -field=passphrase secret/eng/mirror-apt-signing`" -batch=true xenial-proposed-10.24
