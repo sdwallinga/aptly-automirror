@@ -80,6 +80,56 @@
           "url": "http://packages.elastic.co/elasticsearch/1.7/debian"
         }
       ]
+    },
+    {
+      "name": "maxmind",
+      "description": "MaxMind PPA",
+      "dists": [
+        {
+          "distribution": "xenial",
+          "ppa": "maxmind/ppa"
+        }
+      ]
+    },
+    {
+      "name": "postgres",
+      "description": "PostgreSQL",
+      "dists": [
+        {
+          "distribution": "xenial-pgdg",
+          "url": "http://apt.postgresql.org/pub/repos/apt"
+        }
+      ]
+    },
+    {
+      "name": "logstash",
+      "Description": "Old Logstash 2.3",
+      "dists": [
+        {
+          "distribution": "stable",
+          "url": "http://packages.elasticsearch.org/logstash/2.3/debian"
+        }
+      ]
+    },
+    {
+      "name": "deadsnakes",
+      "description": "fkrull/deadsnakes PPA",
+      "dists": [
+        {
+          "distribution": "xenial",
+          "ppa": "fkrull/deadsnakes"
+        }
+      ]
+    },
+    {
+      "name": "mariadb",
+      "description": "MariaDB 10.2",
+      "dists": [
+        {
+          "distribution": "xenial",
+          "url": "http://mirrors.syringanetworks.net/mariadb/repo/10.2/ubuntu"
+        }
+      ]
     }
   ]
 }
