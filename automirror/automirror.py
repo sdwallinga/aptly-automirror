@@ -33,7 +33,6 @@ class AutoMirror:
     ]
     return subprocess.call(args)
 
-
   def snapshot_create(self):
     datestamp = datetime.date.today()
     datestamp = datestamp.strftime('%m.%d')
@@ -49,9 +48,9 @@ class AutoMirror:
     ]
     return subprocess.call(args)
 
-  def snapshot_publish(self):
+  def snapshot_publish(self, signing):
     fs_endpoint = 'filesystem:' + self.endpoint + ':' + self.name
-    signing_key_passphrase = 'dummy_key'
+    signing_key_passphrase = signing
     args = [
       'aptly',
       'publish',
@@ -64,8 +63,8 @@ class AutoMirror:
     ]
     return subprocess.call(args)
 
-  def build_mirror(self):
+  def build_mirror(self, signing):
     self.mirror_create()
     self.mirror_update()
     self.snapshot_create()
-    self.snapshot_publish()
+    self.snapshot_publish(signing)

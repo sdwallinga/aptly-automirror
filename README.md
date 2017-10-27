@@ -14,6 +14,7 @@ Follow the schema in `mirror.json`, adding a new entry to the `repositories` arr
 * Add support for multi-component publishing, such as Canonical's partner repository
 * Actual Vault integration
 * Add error handling
+* Document required aptly config
 
 ### Feature wishlist:
 * Control flags for atomic actions -- i.e. *just* update, *just* snapshot
