@@ -15,6 +15,7 @@ Follow the schema in `mirror.json`, adding a new entry to the `repositories` arr
 * Actual Vault integration
 * Add error handling
 * Document required aptly config
+* Allow adding of GPG keys
 
 ### Feature wishlist:
 * Control flags for atomic actions -- i.e. *just* update, *just* snapshot

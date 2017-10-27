@@ -13,6 +13,8 @@ class AutoMirror:
     self.dist = dist
     self.uri  = uri
     self.cname = name + '-' + dist
+    self.datestamp = datetime.date.today()
+    self.datestamp = self.datestamp.strftime('%m.%d')
 
   def mirror_create(self):
     args = [
@@ -35,9 +37,7 @@ class AutoMirror:
     return subprocess.call(args)
 
   def snapshot_create(self):
-    datestamp = datetime.date.today()
-    datestamp = datestamp.strftime('%m.%d')
-    snapshot = self.cname + '-' + datestamp
+    snapshot = self.cname + '-' + self.datestamp
     args = [
       'aptly',
       'snapshot',
@@ -52,6 +52,7 @@ class AutoMirror:
   def snapshot_publish(self, signing):
     fs_endpoint = 'filesystem:' + self.endpoint + ':' + self.name
     signing_key_passphrase = signing
+    snapshot = self.cname + '-' + self.datestamp
     args = [
       'aptly',
       'publish',
@@ -59,7 +60,7 @@ class AutoMirror:
       '-passphrase',
       signing_key_passphrase,
       '-batch=true',
-      self.cname,
+      snapshot,
       fs_endpoint,
     ]
     return subprocess.call(args)
