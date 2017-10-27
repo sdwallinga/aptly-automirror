@@ -4,6 +4,7 @@
 import json
 import datetime
 import os
+import subprocess
 
 class AutoMirror:
   def __init__(self, endpoint, name, dist, uri):
