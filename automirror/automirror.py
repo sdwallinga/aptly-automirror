@@ -14,20 +14,20 @@ class AutoMirror:
     self.cname = name + '-' + dist
 
   def mirror_create(self):
-    print(f'aptly mirror create {self.cname} {self.uri} {self.dist}')
+    return(f'aptly mirror create {self.cname} {self.uri} {self.dist}')
 
   def mirror_update(self):
-    print(f'aptly mirror update {self.cname}')
+    return(f'aptly mirror update {self.cname}')
 
   def snapshot_create(self):
     datestamp = datetime.date.today()
     datestamp = datestamp.strftime('%m.%d')
     snapshot = self.cname + '-' + datestamp
-    print(f'aptly snapshot create {snapshot} from mirror {self.cname}')
+    return(f'aptly snapshot create {snapshot} from mirror {self.cname}')
 
   def snapshot_publish(self):
     fs_endpoint = 'filesystem:' + self.endpoint + ':' + self.name
-    print(f'aptly publish snapshot -passphrase VAULT_VERY_SECRET_HERE -batch=true {self.cname} {fs_endpoint}')
+    return(f'aptly publish snapshot -passphrase VAULT_VERY_SECRET_HERE -batch=true {self.cname} {fs_endpoint}')
 
   def build_mirror(self):
     self.mirror_create()
