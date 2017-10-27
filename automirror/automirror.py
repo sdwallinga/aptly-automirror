@@ -14,20 +14,55 @@ class AutoMirror:
     self.cname = name + '-' + dist
 
   def mirror_create(self):
-    return(f'aptly mirror create {self.cname} {self.uri} {self.dist}')
+    args = [
+      'aptly',
+      'mirror',
+      'create',
+      self.cname,
+      self.uri,
+      self.dist,
+    ]
+    return subprocess.call(args)
 
   def mirror_update(self):
-    return(f'aptly mirror update {self.cname}')
+    args = [
+      'aptly',
+      'mirror',
+      'update',
+      self.cname,
+    ]
+    return subprocess.call(args)
+
 
   def snapshot_create(self):
     datestamp = datetime.date.today()
     datestamp = datestamp.strftime('%m.%d')
     snapshot = self.cname + '-' + datestamp
-    return(f'aptly snapshot create {snapshot} from mirror {self.cname}')
+    args = [
+      'aptly',
+      'snapshot',
+      'create',
+      snapshot,
+      'from',
+      'mirror',
+      self.cname,
+    ]
+    return subprocess.call(args)
 
   def snapshot_publish(self):
     fs_endpoint = 'filesystem:' + self.endpoint + ':' + self.name
-    return(f'aptly publish snapshot -passphrase VAULT_VERY_SECRET_HERE -batch=true {self.cname} {fs_endpoint}')
+    signing_key_passphrase = 'dummy_key'
+    args = [
+      'aptly',
+      'publish',
+      'snapshot',
+      '-passphrase',
+      signing_key_passphrase,
+      '-batch=true',
+      self.cname,
+      fs_endpoint,
+    ]
+    return subprocess.call(args)
 
   def build_mirror(self):
     self.mirror_create()

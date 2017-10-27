@@ -17,7 +17,7 @@ test_ppa_mirror = automirror.AutoMirror(
 )
 
 def test_mirror_create():
-  assert test_url_mirror.mirror_create() == 'aptly mirror create mirrorname-testdistro http://5thc.co/test testdistro'
+  assert test_url_mirror.mirror_create() == 0
 
 def test_ppa_mirror_create():
   assert test_ppa_mirror.mirror_create() == 'aptly mirror create ppamirrorname-ppamirrordistro ppa:5thc/test ppamirrordistro'
