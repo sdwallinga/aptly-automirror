@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-# Automirror.py
+# __init__.py
+# It's automirror!
 import json
 import datetime
+import os
 
-class Mirror:
+class AutoMirror:
   def __init__(self, endpoint, name, dist, uri):
     self.endpoint = endpoint
     self.name = name
@@ -32,10 +34,3 @@ class Mirror:
     self.mirror_update()
     self.snapshot_create()
     self.snapshot_publish()
-
-with open('mirror.json') as mirror_file:
-  data = json.load(mirror_file)
-  for repo in data['repositories']:
-    for item in repo['dists']:
-      a = Mirror(data['endpoint'], repo['name'], item['distribution'], item['uri'])
-      a.build_mirror()

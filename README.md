@@ -1,6 +1,9 @@
-## automirror
+# automirror
 
 Collection of scripts and tooling working towards painless apt repository management.
+
+### Requirements
+For Vault lookups to work properly (over TLS), `VAULT_TOKEN` and `VAULT_CACERT` environment variables must be set, and the token must have access to `secret/eng`.
 
 ### Adding a new software source
 Follow the schema in `mirror.json`, adding a new entry to the `repositories` array.
@@ -11,4 +14,6 @@ Follow the schema in `mirror.json`, adding a new entry to the `repositories` arr
 * Add support for multi-component publishing, such as Canonical's partner repository
 * Actual Vault integration
 * Add error handling
-* Finer granularity of actions, i.e. don't just do all the steps
+
+### Feature wishlist:
+* Control flags for atomic actions -- i.e. *just* update, *just* snapshot
