@@ -5,6 +5,8 @@ Collection of scripts and tooling working towards painless apt repository manage
 ### Requirements
 For Vault lookups to work properly (over TLS), `VAULT_TOKEN` and `VAULT_CACERT` environment variables must be set, and the token must have access to `secret/eng`.
 
+Requires `aptly >= 1.1`
+
 ### Adding a new software source
 Follow the schema in `mirror.json`, adding a new entry to the `repositories` array.
 
