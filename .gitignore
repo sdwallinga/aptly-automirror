@@ -3,16 +3,33 @@ __pycache__
 *.py[cod]
 *$py.class
  
+# C extensions
+*.so
+ 
+# IDE / editor
+.idea
+*.swp
+ 
 # Distribution / packaging
 .Python
 env
 bin
 build
+develop-eggs
+dist
+downloads
+eggs
+.eggs
 lib
 lib64
 parts
 sdist
 var
+*.egg-info
+.installed.cfg
+*.egg
+ 
+ 
  
 # Installer logs
 pip-log.txt
@@ -29,8 +46,31 @@ coverage.xml
 *.cover
 .hypothesis
  
+# Translations
+*.mo
+*.pot
+ 
+# Django stuff:
+*.log
+local_settings.py
+*.sqlite*
+*.db
+ 
+# Flask stuff:
+instance
+.webassets-cache
+ 
+# Scrapy stuff:
+.scrapy
+ 
 # Sphinx documentation
 docs/_build
+ 
+# IPython Notebook
+.ipynb_checkpoints
+ 
+# celery beat schedule file
+celerybeat-schedule
  
 # virtualenv
 .env
