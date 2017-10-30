@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# __init__.py
 # It's automirror!
 import json
 import datetime
