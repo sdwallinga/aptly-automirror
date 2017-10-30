@@ -87,7 +87,7 @@
       "dists": [
         {
           "distribution": "xenial",
-          "uri": "maxmind/ppa"
+          "uri": "ppa:maxmind/ppa"
         }
       ]
     },
@@ -117,7 +117,7 @@
       "dists": [
         {
           "distribution": "xenial",
-          "uri": "fkrull/deadsnakes"
+          "uri": "ppa:fkrull/deadsnakes"
         }
       ]
     },
