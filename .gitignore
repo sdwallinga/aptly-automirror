@@ -77,3 +77,6 @@ celerybeat-schedule
 .venv
 env
 venv
+
+#editor 
+.vscode/

@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 from setuptools import setup, find_packages
-
 setup(
         name='automirror',
         version='0.0.1',
