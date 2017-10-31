@@ -22,8 +22,18 @@ class AutoMirror:
     self.datestamp = datetime.date.today()
     self.datestamp = self.datestamp.strftime('%m.%d')
 
+  def run_aptly(self, args):
+    """ Handles execution of `aptly` commands
+    :param args: generated aptly command string in list format
+    """
+    try:
+      subprocess.call(args)
+    except OSError:
+      print('whoops')
+
+  @setter
   def mirror_create(self):
-    """ prepares and executes the `aptly mirror create` command
+    """ prepares the `aptly mirror create` command
 
     """
     args = [
@@ -34,10 +44,11 @@ class AutoMirror:
       self.uri,
       self.dist,
     ]
-    return subprocess.call(args)
+    return run_aptly(args)
 
+  @setter
   def mirror_update(self):
-    """ prepares and executes the `aptly mirror update` command
+    """ prepares the `aptly mirror update` command
     """
     args = [
       'aptly',
@@ -45,10 +56,11 @@ class AutoMirror:
       'update',
       self.cname,
     ]
-    return subprocess.call(args)
+    return run_aptly(args)
 
+  @setter
   def snapshot_create(self):
-    """ prepares and executes the `aptly snapshot create` command
+    """ prepares `aptly snapshot create` command
     """
     snapshot = self.cname + '-' + self.datestamp
     args = [
@@ -60,10 +72,11 @@ class AutoMirror:
       'mirror',
       self.cname,
     ]
-    return subprocess.call(args)
-
+    return run_aptly(args)
+  
+  @setter
   def snapshot_publish(self, signing):
-    """ prepares and executes the `aptly snapshot publish` command
+    """ prepares the `aptly snapshot publish` command
     """
     fs_endpoint = 'filesystem:' + self.endpoint + ':' + self.name
     signing_key_passphrase = signing
@@ -78,7 +91,7 @@ class AutoMirror:
       snapshot,
       fs_endpoint,
     ]
-    return subprocess.call(args)
+    return run_aptly(args)
 
   def build_mirror(self, signing):
     """ Conveniently executes all the functions for a fresh mirror release.

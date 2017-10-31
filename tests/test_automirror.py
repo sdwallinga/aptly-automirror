@@ -36,12 +36,3 @@ def test_ppa_obj_create():
   assert ppa_mirror.uri == 'ppa:5thc/test'
   assert ppa_mirror.cname == 'ppatest-xenial'
 
-@patch.object(core.AutoMirror, 'mirror_create')
-def test_mirror_create(mocked_create):
-  mocked_create.return_value = 'Mocked'
-  assert url_mirror.mirror_create() == 'Mocked'
-
-@patch.object(core.AutoMirror, 'mirror_update')
-def test_mirror_create(mocked_update):
-  mocked_update.return_value = 'Mocked'
-  assert url_mirror.mirror_update() == 'Mocked'
