@@ -31,7 +31,7 @@ class AutoMirror:
       subprocess.call(args)
       return 0
     except OSError as e:
-      print(f'{e}')
+      print(e)
       return 1
 
   def mirror_create(self):
