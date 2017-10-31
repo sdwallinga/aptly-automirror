@@ -31,7 +31,6 @@ class AutoMirror:
     except OSError:
       print('whoops')
 
-  @setter
   def mirror_create(self):
     """ prepares the `aptly mirror create` command
 
@@ -46,7 +45,6 @@ class AutoMirror:
     ]
     return run_aptly(args)
 
-  @setter
   def mirror_update(self):
     """ prepares the `aptly mirror update` command
     """
@@ -58,7 +56,6 @@ class AutoMirror:
     ]
     return run_aptly(args)
 
-  @setter
   def snapshot_create(self):
     """ prepares `aptly snapshot create` command
     """
@@ -74,7 +71,6 @@ class AutoMirror:
     ]
     return run_aptly(args)
   
-  @setter
   def snapshot_publish(self, signing):
     """ prepares the `aptly snapshot publish` command
     """
