@@ -43,7 +43,7 @@ class AutoMirror:
       self.uri,
       self.dist,
     ]
-    return run_aptly(args)
+    return self.run_aptly(args)
 
   def mirror_update(self):
     """ prepares the `aptly mirror update` command
@@ -54,7 +54,7 @@ class AutoMirror:
       'update',
       self.cname,
     ]
-    return run_aptly(args)
+    return self.run_aptly(args)
 
   def snapshot_create(self):
     """ prepares `aptly snapshot create` command
@@ -69,7 +69,7 @@ class AutoMirror:
       'mirror',
       self.cname,
     ]
-    return run_aptly(args)
+    return self.run_aptly(args)
   
   def snapshot_publish(self, signing):
     """ prepares the `aptly snapshot publish` command
@@ -87,7 +87,7 @@ class AutoMirror:
       snapshot,
       fs_endpoint,
     ]
-    return run_aptly(args)
+    return self.run_aptly(args)
 
   def build_mirror(self, signing):
     """ Conveniently executes all the functions for a fresh mirror release.
