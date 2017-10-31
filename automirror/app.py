@@ -7,6 +7,11 @@ import hvac
 from core import AutoMirror
 
 def main():
+    """ Builds a new 'release' of the mirror
+
+    Vault secret information must be set in variables below.
+    """
+
     client = hvac.Client(url='https://plkvolxvault04.prd.5thc.co:8200', token=os.environ['VAULT_TOKEN'], verify=os.environ['VAULT_CACERT'])
     signing = client.read('secret/eng/mirror-apt-signing')
     signing = signing['data']['passphrase']
