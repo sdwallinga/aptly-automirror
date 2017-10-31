@@ -24,16 +24,19 @@ class AutoMirror:
 
   def run_aptly(self, args):
     """ Handles execution of `aptly` commands
+    .. TODO:: Actual error handling
     :param args: generated aptly command string in list format
     """
     try:
       subprocess.call(args)
-    except OSError:
-      print('whoops')
+      return 0
+    except OSError as e:
+      print(f'{e}')
+      return 1
 
   def mirror_create(self):
     """ prepares the `aptly mirror create` command
-
+    .. TODO:: Add PPA handling
     """
     args = [
       'aptly',
@@ -43,7 +46,9 @@ class AutoMirror:
       self.uri,
       self.dist,
     ]
-    return self.run_aptly(args)
+    if (self.uri[:3] == 'ppa'):
+      args.remove(self.dist)
+    return args
 
   def mirror_update(self):
     """ prepares the `aptly mirror update` command
@@ -54,7 +59,7 @@ class AutoMirror:
       'update',
       self.cname,
     ]
-    return self.run_aptly(args)
+    return args
 
   def snapshot_create(self):
     """ prepares `aptly snapshot create` command
@@ -69,7 +74,7 @@ class AutoMirror:
       'mirror',
       self.cname,
     ]
-    return self.run_aptly(args)
+    return args
   
   def snapshot_publish(self, signing):
     """ prepares the `aptly snapshot publish` command
@@ -87,12 +92,12 @@ class AutoMirror:
       snapshot,
       fs_endpoint,
     ]
-    return self.run_aptly(args)
+    return args
 
   def build_mirror(self, signing):
     """ Conveniently executes all the functions for a fresh mirror release.
     """
-    self.mirror_create()
-    self.mirror_update()
-    self.snapshot_create()
-    self.snapshot_publish(signing)
+    self.run_aptly(self.mirror_create())
+    self.run_aptly(self.mirror_update())
+    self.run_aptly(self.snapshot_create())
+    self.run_aptly(self.snapshot_publish(signing))
