@@ -77,7 +77,7 @@
       "dists": [
         {
           "distribution": "xenial",
-          "uri": "webupd8team/java"
+          "uri": "ppa:webupd8team/java"
         }
       ]
     },
