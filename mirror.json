@@ -24,6 +24,26 @@
         {
           "distribution": "xenial-updates",
           "uri": "http://us-east-1.archive.ubuntu.com/ubuntu"
+        },
+        {
+          "distribution": "trusty",
+          "uri": "http://us-east-1.archive.ubuntu.com/ubuntu"
+        },
+        { 
+          "distribution": "trusty-backports",
+          "uri": "http://us-east-1.archive.ubuntu.com/ubuntu"
+        },
+        {
+          "distribution": "trusty-proposed",
+          "uri": "http://us-east-1.archive.ubuntu.com/ubuntu"
+        },
+        {
+          "distribution": "trusty-security",
+          "uri": "http://us-east-1.archive.ubuntu.com/ubuntu"
+        },
+        {
+          "distribution": "trusty-updates",
+          "uri": "http://us-east-1.archive.ubuntu.com/ubuntu"
         }
       ]
     },
@@ -128,6 +148,20 @@
         {
           "distribution": "xenial",
           "uri": "http://mirrors.syringanetworks.net/mariadb/repo/10.2/ubuntu"
+        }
+      ]
+    },
+    {
+      "name": "wazuh",
+      "description": "Wazuh",
+      "dists": [
+        {
+          "distribution": "xenial",
+          "uri": "https://packages.wazuh.com/apt"
+        },
+        {
+          "distribution": "trusty",
+           "uri": "https://packages.wazuh.com/apt"
         }
       ]
     }
