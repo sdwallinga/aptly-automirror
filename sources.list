@@ -1,0 +1,18 @@
+# Official Ubuntu Xenial repositories
+deb http://mirror.5thc.co/ubuntu xenial main restricted universe multiverse
+deb http://mirror.5thc.co/ubuntu xenial-updates main restricted universe multiverse
+deb http://mirror.5thc.co/ubuntu xenial-backports main restricted universe multiverse
+deb http://mirror.5thc.co/ubuntu xenial-security main restricted universe multiverse
+  
+# Third-party development repositories
+deb http://mirror.5thc.co/deadsnakes xenial main
+deb http://mirror.5thc.co/elastic stable main
+deb http://mirror.5thc.co/java xenial main
+deb http://mirror.5thc.co/maxmind xenial main
+deb http://mirror.5thc.co/mesos xenial main
+deb http://mirror.5thc.co/postgres xenial-pgdg main 9.4
+  
+# Third-party infrastructure-specific repositories
+deb http://mirror.5thc.co/zabbix xenial main
+deb http://mirror.5thc.co/atomic xenial main
+deb http://mirror.5thc.co/wazuh xenial main
