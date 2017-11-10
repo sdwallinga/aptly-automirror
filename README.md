@@ -11,13 +11,11 @@ Requires `aptly >= 1.1`
 Follow the schema in `mirror.json`, adding a new entry to the `repositories` array.
 
 ### TODOs
-* Make it work!
-* Add PPA-specific support
-* Add support for multi-component publishing, such as Canonical's partner repository
-* Actual Vault integration
 * Add error handling
 * Document required aptly config
-* Allow adding of GPG keys
 
 ### Feature wishlist:
 * Control flags for atomic actions -- i.e. *just* update, *just* snapshot
+* GPG key import prompt when remote repo key not already present
+* Extend JSON object/logic to handle repository components (rather than grabbing all of them per default Aptly behavior)
+* Multi-component publishing from the above
