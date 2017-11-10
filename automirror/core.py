@@ -36,7 +36,6 @@ class AutoMirror:
 
   def mirror_create(self):
     """ prepares the `aptly mirror create` command
-    .. TODO:: Add PPA handling
     """
     args = [
       'aptly',

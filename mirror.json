@@ -62,6 +62,16 @@
       ]
     },
     {
+      "name": "docker",
+      "description": "Official Docker-ce packages. Component: stable",
+      "dists": [
+        {
+          "distribution": "xenial",
+          "uri": "https://download.docker.com/linux/ubuntu"
+        }
+      ]
+    },
+    {
       "name": "mesos",
       "description": "Mesos",
       "dists": [
