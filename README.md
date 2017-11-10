@@ -14,8 +14,9 @@ Follow the schema in `mirror.json`, adding a new entry to the `repositories` arr
 * Add error handling
 * Document required aptly config
 
-### Feature wishlist:
+### Roadmap to 1.0
 * Control flags for atomic actions -- i.e. *just* update, *just* snapshot
 * GPG key import prompt when remote repo key not already present
 * Extend JSON object/logic to handle repository components (rather than grabbing all of them per default Aptly behavior)
 * Multi-component publishing from the above
+* Properly package for distribution!
