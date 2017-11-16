@@ -1,6 +1,6 @@
 # automirror
 
-Collection of scripts and tooling working towards painless apt repository management.
+Working towards painless APT repository management. Defines a JSON object to easly add/remove Debian-format software repositories to be mirrored locally.
 
 ### Requirements
 For Vault lookups to work properly (over TLS), `VAULT_TOKEN` and `VAULT_CACERT` environment variables must be set, and the token must have access to `secret/eng`.
