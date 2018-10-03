@@ -12,8 +12,8 @@ def main():
     Vault secret information must be set in variables below.
     """
 
-    client = hvac.Client(url='https://plkvolxvault04.prd.5thc.co:8200', token=os.environ['VAULT_TOKEN'], verify=os.environ['VAULT_CACERT'])
-    signing = client.read('secret/eng/mirror-apt-signing')
+    client = hvac.Client(url='VAULT_URL', token=os.environ['VAULT_TOKEN'], verify=os.environ['VAULT_CACERT'])
+    signing = client.read('VAULT_SIGNING_KEY_SECRET')
     signing = signing['data']['passphrase']
 
     with open('../mirror.json') as mirror_file:
